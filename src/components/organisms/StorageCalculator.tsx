@@ -8,12 +8,9 @@ import { GradientBadge } from "@/components/atoms/GradientBadge"
 export function StorageCalculator() {
   const [storageTb, setStorageTb] = useState<number>(10)
 
-  // Monthly costs
+  // Estimated commercial cloud cost for comparison savings
   const googleDriveMonthly = storageTb <= 2 ? 9.99 : (storageTb / 2) * 9.99
-  const awsS3Monthly = storageTb * 1024 * 0.023
-
   const yearlyGoogle = Math.round(googleDriveMonthly * 12)
-  const yearlyS3 = Math.round(awsS3Monthly * 12)
   const threeYearSavings = Math.round(yearlyGoogle * 3)
 
   return (
@@ -22,12 +19,12 @@ export function StorageCalculator() {
         <SectionHeading
           badge={
             <GradientBadge variant="emerald" icon={<Calculator className="w-3.5 h-3.5" />}>
-              Cost Calculator
+              100% Free Forever
             </GradientBadge>
           }
-          title="Calculate Your Savings."
+          title="Infinite Storage Volume."
           highlight="Zero Monthly Invoices."
-          description="Drag the slider to see how much money you or your team are currently throwing away on legacy cloud storage subscriptions."
+          description="Slide to select your desired volume. DeeRiver is 100% free with no monthly subscription tiers, no storage penalties, and unlimited bandwidth."
         />
 
         <div className="mt-14 max-w-4xl mx-auto rounded-3xl border border-border/80 bg-zinc-950/80 backdrop-blur-2xl shadow-2xl p-6 sm:p-10">
@@ -67,54 +64,50 @@ export function StorageCalculator() {
             </div>
           </div>
 
-          {/* Pricing Comparison Grid */}
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {/* Google Drive */}
-            <div className="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-semibold text-zinc-400">Google One / Workspace</span>
-                <div className="mt-2 text-2xl font-bold text-foreground font-mono">
-                  ${Math.round(googleDriveMonthly)}
-                  <span className="text-xs text-muted-foreground font-sans font-normal">/mo</span>
+          {/* Single Focused DeeRiver 100% Free Plan Card */}
+          <div className="mt-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-primary/20 via-cyan-500/10 to-transparent border-2 border-primary/50 shadow-xl shadow-primary/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="text-xl sm:text-2xl font-bold text-white">DeeRiver Free Plan</span>
+                <Badge variant="success" className="text-xs py-0.5 px-2.5 font-semibold">
+                  100% Free & Open Source
+                </Badge>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground max-w-xl leading-relaxed">
+                No storage caps, no monthly subscription fees, and no credit card required.
+                Store as many terabytes as you need with unlimited bandwidth.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+                <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Unlimited Bandwidth & Storage ({storageTb} TB+)</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Native OS FUSE Virtual Mount</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Zero-Knowledge AES-256 Vault</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Team Workspaces & Cloud Downloader</span>
                 </div>
               </div>
-              <p className="mt-3 text-xs text-rose-400 font-mono">
-                ${yearlyGoogle.toLocaleString()} / year
-              </p>
             </div>
 
-            {/* AWS S3 */}
-            <div className="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-semibold text-zinc-400">Amazon S3 Standard</span>
-                <div className="mt-2 text-2xl font-bold text-foreground font-mono">
-                  ${Math.round(awsS3Monthly)}
-                  <span className="text-xs text-muted-foreground font-sans font-normal">/mo</span>
-                </div>
+            <div className="flex flex-col items-start md:items-end shrink-0 border-t md:border-t-0 md:border-l border-border/60 pt-4 md:pt-0 md:pl-8 w-full md:w-auto">
+              <span className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
+                Your Monthly Cost
+              </span>
+              <div className="text-4xl sm:text-5xl font-extrabold text-foreground font-mono my-1">
+                $0
+                <span className="text-sm text-muted-foreground font-sans font-normal"> / month</span>
               </div>
-              <p className="mt-3 text-xs text-rose-400 font-mono">
-                ${yearlyS3.toLocaleString()} / year + egress
-              </p>
-            </div>
-
-            {/* DeeRiver Card (Highlighted) */}
-            <div className="p-5 rounded-2xl bg-gradient-to-b from-primary/20 via-cyan-500/10 to-transparent border-2 border-primary/50 flex flex-col justify-between shadow-lg shadow-primary/10">
-              <div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-primary">DeeRiver Cloud</span>
-                  <Badge variant="success" className="text-[9px] py-0 px-1.5 h-4">
-                    Included
-                  </Badge>
-                </div>
-                <div className="mt-2 text-3xl font-extrabold text-foreground font-mono">
-                  $0
-                  <span className="text-xs text-muted-foreground font-sans font-normal">/month</span>
-                </div>
-              </div>
-              <div className="mt-3 flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
-                <Check className="w-3.5 h-3.5" />
-                <span>Unlimited Bandwidth & Storage</span>
-              </div>
+              <span className="text-xs text-emerald-400 font-medium">
+                Free Forever • Zero Hidden Fees
+              </span>
             </div>
           </div>
 
@@ -135,7 +128,7 @@ export function StorageCalculator() {
             </div>
 
             <div className="text-xs text-muted-foreground max-w-xs text-center sm:text-right">
-              Based on {storageTb} TB stored without paying recurring monthly corporate storage penalties.
+              Based on {storageTb} TB stored compared to paying commercial cloud monthly subscription rates.
             </div>
           </div>
         </div>
