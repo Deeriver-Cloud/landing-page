@@ -111,24 +111,34 @@ export function StorageCalculator() {
             </div>
           </div>
 
-          {/* 3-Year Total Savings Banner */}
-          <div className="mt-8 p-5 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-primary/10 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-            <div className="flex items-center gap-3.5">
+          {/* 3-Year Total Savings & Unlimited Bandwidth Banner */}
+          <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-primary/10 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+            <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center shrink-0">
                 <TrendingDown className="w-6 h-6" />
               </div>
               <div>
-                <p className="text-xs uppercase tracking-wider text-emerald-400 font-bold">
-                  Estimated 3-Year Cloud Savings
-                </p>
+                <div className="flex items-center justify-center sm:justify-start gap-2 mb-0.5">
+                  <p className="text-xs uppercase tracking-wider text-emerald-400 font-bold">
+                    Estimated 3-Year Cloud Savings
+                  </p>
+                  <Badge variant="cyan" className="text-[10px] py-0 px-2 h-4 font-mono">
+                    Unlimited Traffic
+                  </Badge>
+                </div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-white font-mono">
                   ${threeYearSavings.toLocaleString()} USD
                 </p>
               </div>
             </div>
 
-            <div className="text-xs text-muted-foreground max-w-xs text-center sm:text-right">
-              Based on {storageTb} TB stored compared to paying commercial cloud monthly subscription rates.
+            <div className="text-xs text-muted-foreground max-w-sm text-center sm:text-right space-y-1">
+              <p className="text-zinc-200 font-semibold">
+                100% Free — No matter how much traffic you use!
+              </p>
+              <p className="text-zinc-400">
+                Zero egress fees, zero transfer quotas, and zero monthly bills regardless of how many gigabytes you stream or download.
+              </p>
             </div>
           </div>
         </div>
