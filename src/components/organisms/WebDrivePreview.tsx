@@ -45,12 +45,12 @@ export function WebDrivePreview() {
         <SectionHeading
           badge={
             <GradientBadge variant="cyan" icon={<Globe className="w-3.5 h-3.5" />}>
-              Next-Gen Web Drive
+              Google Drive & Dropbox Experience
             </GradientBadge>
           }
-          title="Instant Access from Any Browser."
-          highlight="Telegram SSO Included."
-          description="Access, stream, and manage your infinite cloud storage from any device without installing software. Powered by frictionless 1-click Telegram Single Sign-On."
+          title="A Full Web Drive in Your Browser."
+          highlight="No App Installation Required."
+          description="Manage nested folders, stream movies, preview documents, and share files just like Google Drive or Dropbox — running entirely in your browser with 1-click Telegram login."
         />
 
         {/* Telegram SSO Callout Card */}

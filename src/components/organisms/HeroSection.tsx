@@ -1,5 +1,4 @@
 import {
-  Download,
   Send,
   ShieldCheck,
   Users,
@@ -32,24 +31,24 @@ export function HeroSection() {
             variant="cyan"
             className="hover:scale-105 transition-transform cursor-pointer"
           >
-            <span>DeeRiver 0.1.0 Released — Native OS Mount & Offline Resilient Queue</span>
+            <span>Free Unlimited Cloud Storage — Web App & Native Desktop Mount</span>
           </GradientBadge>
         </div>
 
         {/* Primary Hero Heading */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground max-w-5xl leading-[1.1] sm:leading-[1.12]">
-          Infinite Cloud Storage.{" "}
+          Mount Your Telegram as a Drive.{" "}
           <GradientText from="from-cyan-400 via-sky-400 to-blue-500">
-            Powered by Telegram.
-          </GradientText>{" "}
-          Mounted as Local Drive.
+            Or use it like Google Drive & Dropbox.
+          </GradientText>
         </h1>
 
         {/* Subtitle */}
         <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-          DeeRiver turns your Telegram into an infinite cloud drive. Connect it to your computer
-          just like plugging in a giant USB flash drive — stream movies without waiting for downloads,
-          collaborate in team workspaces, and keep your files secure with zero-knowledge encryption.
+          DeeRiver turns your Telegram into personal cloud storage with two effortless ways to use it:
+          a modern web drive right in your browser just like Google Drive, or a desktop app
+          that mounts your Telegram to your computer like a USB flash drive.
+          100% free with unlimited capacity.
         </p>
 
         {/* Primary Call To Actions */}
@@ -77,8 +76,8 @@ export function HeroSection() {
               size="lg"
               className="w-full sm:w-auto gap-2.5 text-base font-medium h-12 px-6 rounded-xl border-border/80 hover:bg-secondary/60 bg-background/50 backdrop-blur-sm"
             >
-              <Download className="w-4 h-4 text-cyan-400" />
-              <span>Get Desktop App (FUSE)</span>
+              <Laptop className="w-4 h-4 text-cyan-400" />
+              <span>Mount on Desktop</span>
             </Button>
           </a>
         </div>
@@ -95,15 +94,15 @@ export function HeroSection() {
         <div className="mt-12 pt-8 border-t border-border/40 w-full max-w-4xl grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
           <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-300">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>0$ Monthly Storage Bills</span>
+            <span>100% Free & Unlimited</span>
           </div>
           <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-300">
             <Laptop className="w-4 h-4 text-cyan-400 shrink-0" />
-            <span>Native Linux/macOS/Win Mount</span>
+            <span>Web Drive & Desktop Mount</span>
           </div>
           <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-300">
             <ShieldCheck className="w-4 h-4 text-purple-400 shrink-0" />
-            <span>Client-Side AES-256 Vault</span>
+            <span>Client-Side Encrypted Vault</span>
           </div>
           <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-300">
             <Users className="w-4 h-4 text-sky-400 shrink-0" />
