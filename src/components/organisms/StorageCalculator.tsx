@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Calculator, TrendingDown, Check } from "lucide-react"
+import { Calculator, Check } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Slider } from "@/components/ui/slider"
 import { SectionHeading } from "@/components/atoms/Typography"
@@ -7,11 +7,6 @@ import { GradientBadge } from "@/components/atoms/GradientBadge"
 
 export function StorageCalculator() {
   const [storageTb, setStorageTb] = useState<number>(10)
-
-  // Estimated commercial cloud cost for comparison savings
-  const googleDriveMonthly = storageTb <= 2 ? 9.99 : (storageTb / 2) * 9.99
-  const yearlyGoogle = Math.round(googleDriveMonthly * 12)
-  const threeYearSavings = Math.round(yearlyGoogle * 3)
 
   return (
     <section id="calculator" className="py-24 relative overflow-hidden bg-background/40">
@@ -75,12 +70,16 @@ export function StorageCalculator() {
               </div>
               <p className="text-xs sm:text-sm text-muted-foreground max-w-xl leading-relaxed">
                 No storage caps, no monthly subscription fees, and no credit card required.
-                Store as many terabytes as you need with unlimited bandwidth.
+                Store and transfer as many terabytes as you need with completely free, unlimited traffic.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
                 <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
                   <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Unlimited Bandwidth & Storage ({storageTb} TB+)</span>
+                  <span>Unlimited Storage ({storageTb} TB+)</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Unlimited Bandwidth (100% Free Traffic)</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
                   <Check className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -93,6 +92,10 @@ export function StorageCalculator() {
                 <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
                   <Check className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>Team Workspaces & Cloud Downloader</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Zero Egress or Bandwidth Fees</span>
                 </div>
               </div>
             </div>
@@ -108,37 +111,6 @@ export function StorageCalculator() {
               <span className="text-xs text-emerald-400 font-medium">
                 Free Forever • Zero Hidden Fees
               </span>
-            </div>
-          </div>
-
-          {/* 3-Year Total Savings & Unlimited Bandwidth Banner */}
-          <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-primary/10 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center shrink-0">
-                <TrendingDown className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="flex items-center justify-center sm:justify-start gap-2 mb-0.5">
-                  <p className="text-xs uppercase tracking-wider text-emerald-400 font-bold">
-                    Estimated 3-Year Cloud Savings
-                  </p>
-                  <Badge variant="cyan" className="text-[10px] py-0 px-2 h-4 font-mono">
-                    Unlimited Traffic
-                  </Badge>
-                </div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-white font-mono">
-                  ${threeYearSavings.toLocaleString()} USD
-                </p>
-              </div>
-            </div>
-
-            <div className="text-xs text-muted-foreground max-w-sm text-center sm:text-right space-y-1">
-              <p className="text-zinc-200 font-semibold">
-                100% Free — No matter how much traffic you use!
-              </p>
-              <p className="text-zinc-400">
-                Zero egress fees, zero transfer quotas, and zero monthly bills regardless of how many gigabytes you stream or download.
-              </p>
             </div>
           </div>
         </div>
