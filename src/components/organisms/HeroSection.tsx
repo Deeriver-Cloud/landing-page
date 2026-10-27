@@ -47,10 +47,9 @@ export function HeroSection() {
 
         {/* Subtitle */}
         <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-          DeeRiver turns Telegram's high-speed distributed infrastructure into an
-          unlimited cloud drive. Mount it seamlessly onto your OS file manager,
-          stream 4K media without downloading, collaborate in team workspaces, and
-          protect your sensitive files with zero-knowledge AES-256 encryption.
+          DeeRiver turns your Telegram into an infinite cloud drive. Connect it to your computer
+          just like plugging in a giant USB flash drive — stream movies without waiting for downloads,
+          collaborate in team workspaces, and keep your files secure with zero-knowledge encryption.
         </p>
 
         {/* Primary Call To Actions */}

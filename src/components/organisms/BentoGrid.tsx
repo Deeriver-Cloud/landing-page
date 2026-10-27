@@ -42,11 +42,11 @@ export function BentoGrid() {
                 <Badge variant="glow">Linux • macOS • Windows</Badge>
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">
-                Native FUSE Virtual Drive
+                Connect Telegram Like a USB Drive
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Mount your entire Telegram storage as a physical local drive. Open files in VLC,
-                VS Code, or Blender with instant on-demand parallel range streaming.
+                Plug your Telegram storage directly into your operating system. Browse folders,
+                drag & drop files, and play videos in VLC without eating up your local hard drive.
               </p>
             </div>
 
