@@ -89,9 +89,9 @@ export function OsFileManagerDemo() {
               Native Desktop Integration
             </GradientBadge>
           }
-          title="Mounted Directly on Your System."
-          highlight="Feels Just Like a Local SSD."
-          description="Thanks to our high-performance FUSE driver, DeeRiver integrates natively into Ubuntu Nautilus, macOS Finder, and Windows Explorer. Stream files on-demand without filling your local disk."
+          title="Mount Your Telegram to Your Computer."
+          highlight="Just Like an Infinite USB Drive."
+          description="With our desktop app, your Telegram connects directly to your system just like plugging in a giant USB flash drive. Drag & drop files, play movies instantly, and manage folders right inside your file manager without using up your local hard drive."
         />
 
         {/* Ubuntu Nautilus Window Mockup */}
