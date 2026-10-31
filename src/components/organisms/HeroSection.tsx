@@ -85,7 +85,7 @@ export function HeroSection() {
         {/* One-Line Terminal Command */}
         <div className="mt-8 w-full max-w-md">
           <TerminalCommand
-            command="curl -fsSL https://deeriver.wiregeek.ir/install.sh | bash"
+            command="curl -fsSL https://raw.githubusercontent.com/Deeriver-Cloud/desktop/main/install.sh | bash"
             label="Linux & macOS Quick Setup"
           />
         </div>

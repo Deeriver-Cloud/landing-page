@@ -70,12 +70,12 @@ export function Footer() {
             <ul className="space-y-2 text-muted-foreground">
               <li>
                 <a
-                  href="https://github.com/Deeriver-Cloud/deeriver"
+                  href="https://github.com/Deeriver-Cloud"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors flex items-center gap-1"
                 >
-                  <span>GitHub Repository</span>
+                  <span>GitHub Organization</span>
                   <ArrowUpRight className="w-3 h-3 opacity-60" />
                 </a>
               </li>

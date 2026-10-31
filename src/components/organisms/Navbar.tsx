@@ -70,7 +70,7 @@ export function Navbar() {
         {/* Action CTAs */}
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href="https://github.com/Deeriver-Cloud/deeriver"
+            href="https://github.com/Deeriver-Cloud"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground px-3 py-2 rounded-lg hover:bg-secondary/60 transition-colors"
@@ -143,7 +143,7 @@ export function Navbar() {
               </Button>
             </a>
             <a
-              href="https://github.com/Deeriver-Cloud/deeriver"
+              href="https://github.com/Deeriver-Cloud"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full"
