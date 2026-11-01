@@ -76,7 +76,7 @@ export function WebDrivePreview() {
           </div>
 
           <a
-            href="https://deeriver.wiregeek.ir/drive"
+            href="https://app.gitlynx.ir/drive"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 w-full sm:w-auto"
@@ -101,7 +101,7 @@ export function WebDrivePreview() {
             {/* URL Bar */}
             <div className="flex-1 max-w-md mx-auto flex items-center gap-2 px-3 py-1 bg-zinc-800/80 rounded-lg text-zinc-300 font-mono text-[11px] border border-zinc-700/50 justify-center">
               <Lock className="w-3 h-3 text-emerald-400" />
-              <span>https://deeriver.wiregeek.ir/drive</span>
+              <span>https://app.gitlynx.ir/drive</span>
             </div>
 
             <div className="flex items-center gap-2 text-zinc-400">

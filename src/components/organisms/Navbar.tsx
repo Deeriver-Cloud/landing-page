@@ -80,7 +80,7 @@ export function Navbar() {
           </a>
 
           <a
-            href="https://deeriver.wiregeek.ir/drive"
+            href="https://app.gitlynx.ir/drive"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -95,7 +95,7 @@ export function Navbar() {
         {/* Mobile Hamburger */}
         <div className="flex items-center gap-2 lg:hidden">
           <a
-            href="https://deeriver.wiregeek.ir/drive"
+            href="https://app.gitlynx.ir/drive"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -132,7 +132,7 @@ export function Navbar() {
           </nav>
           <div className="pt-4 border-t border-border flex flex-col gap-3">
             <a
-              href="https://deeriver.wiregeek.ir/drive"
+              href="https://app.gitlynx.ir/drive"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full"

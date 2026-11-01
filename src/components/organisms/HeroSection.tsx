@@ -54,7 +54,7 @@ export function HeroSection() {
         {/* Primary Call To Actions */}
         <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <a
-            href="https://deeriver.wiregeek.ir/drive"
+            href="https://app.gitlynx.ir/drive"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto"
